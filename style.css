@@ -1,3 +1,9 @@
 .side-by-side {
   display: inline-block;
 }
+
+.destaque {
+  border: 5px;
+  margin: 0;
+  line-height: 200%
+}

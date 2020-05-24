@@ -24,11 +24,13 @@ function updateQuestions(){
   ready_button.setAttribute("onclick", "corrigir()")
   resulting_span.appendChild(ready_button)
 
-  document.getElementById("questoes").remove();
-  document.body.appendChild(resulting_span);
+  document.body.replaceChild(resulting_span, document.getElementById("questoes"));
 }
 
 function corrigir(){
+  var pont_final = 0.0
+  var pont_max = 0.0
+
   for (question of document.getElementById("questoes").getElementsByClassName("question")){
     var given_answer = [];
 
@@ -64,7 +66,13 @@ function corrigir(){
     question.getElementsByClassName("pontos_questao")[0].innerHTML = p.toFixed(2)
 
     //console.log(`NP = ${np} ; NTPC = ${ntpc} ; NPC = ${npc} ; NPI = ${npi} ; P = ${p}`)
+    pont_final += p
+    pont_max += 1.0
   }
+  var span_pontuacao_final = document.getElementById("pontuacao")
+  span_pontuacao_final.hidden = false
+  span_pontuacao_final.getElementsByClassName("pontos_final")[0].innerHTML = `${pont_final} / ${pont_max}`
+
 }
 
 // Returns an array
