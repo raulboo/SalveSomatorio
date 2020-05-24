@@ -5,54 +5,6 @@
 // }
 
 function updateQuestions(){
-  // var resulting_span = document.createElement("span");
-  //
-  // for (i = 0; i < document.getElementById("qtQuestoes").value; i++) {
-  //   var question = document.createElement("div");
-  //   var alternatives = document.createElement("div");
-  //
-  //   var text_label = document.createElement("label");
-  //   var x = document.createTextNode(`Questão ${i + 1}`);
-  //   text_label.appendChild(x);
-  //
-  //   var gabarito = document.createElement("input");
-  //   gabarito.setAttribute("type", "number");
-  //   gabarito.setAttribute("id", `gabarito${i}`);
-  //
-  //   var ate_qual = document.createElement("select");
-  //   ate_qual.setAttribute("id", `ate_qual${i}`);
-  //
-  //   for (j = 0; i < 7; i++) {
-  //     var check_box = document.createElement("input");
-  //     check_box.setAttribute("type", "checkbox");
-  //     check_box.setAttribute("name", `alternative${j}`);
-  //
-  //     var check_label = document.createElement("label");
-  //     var t = document.createTextNode(Math.pow(2, j));
-  //     check_label.appendChild(t);
-  //     check_box.appendChild(check_label);
-  //
-  //     alternatives.appendChild(check_box);
-  //
-  //     var option = document.createElement("option");
-  //     option.setAttribute("value", j);
-  //     var y = document.createTextNode(Math.pow(2, j));
-  //     option.appendChild(y);
-  //     ate_qual.appendChild(option);
-  //   }
-  //
-  //   question.appendChild(alternatives);
-  //   question.appendChild(gabarito);
-  //   question.appendChild(ate_qual);
-  //
-  //   question.setAttribute("id", `q${i}`);
-  //   resulting_span.appendChild(question);
-  // }
-  //
-  //
-  // //x.setAttribute("type", "number");
-  // //x.setAttribute("value", "12345");
-  // document.body.appendChild(resulting_span);
 
   var resulting_span = document.createElement("span");
   resulting_span.setAttribute("id", "questoes");
@@ -111,15 +63,7 @@ function corrigir(){
 
     question.getElementsByClassName("pontos_questao")[0].innerHTML = p.toFixed(2)
 
-    console.log(`NP = ${np} ; NTPC = ${ntpc} ; NPC = ${npc} ; NPI = ${npi} ; P = ${p}`)
-
-
-
-    //console.log(((gabarito_puro ? gabarito_puro : 0) >>> 0).toString(2).split("").reverse().map(a => !!+a))
-    //console.log(((gabarito_puro ? gabarito_puro : 0) >>> 0).toString(2).split().reverse().map(a => !!+a));
-    //console.log(given_answer);
-    //console.log(right_answer);
-
+    //console.log(`NP = ${np} ; NTPC = ${ntpc} ; NPC = ${npc} ; NPI = ${npi} ; P = ${p}`)
   }
 }
 
