@@ -71,7 +71,7 @@ function corrigir(){
   }
   var span_pontuacao_final = document.getElementById("pontuacao")
   span_pontuacao_final.hidden = false
-  span_pontuacao_final.getElementsByClassName("pontos_final")[0].innerHTML = `${pont_final} / ${pont_max}`
+  span_pontuacao_final.getElementsByClassName("pontos_final")[0].innerHTML = `${pont_final.toFixed(2)} / ${pont_max.toFixed(2)}`
 
 }
 
