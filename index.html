@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <title>Calculadora Somatório SALVE</title>
+
+    <!-- This line removes any default padding and style.
+    You might only need one of these values set. -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <h1>Calculadora Somatório SALVE</h1>
+    <!--p>Simulação de física utilizando forças simples. As flechas representam as
+      forças aplicadas às bolas. </br> Clique no botão esquerdo do seu mouse para
+      acionar uma força vento nelas.</p-->
+    <span id="inputs">
+      <p class="side-by-side">Quantidade de Questões:</p>
+      <div class="side-by-side">
+        <input type="number" class="number" id="qtQuestoes" min="1" max="160" value="10" step="1">
+        <!--label for="qtQuestoes" id="gravConstLabel" class="centeredLabel">1 m³/Kg s²</label-->
+      </div>
+
+      <!--p>Gravidade Local:</p>
+      <input type="checkBox" id="gravCheck">
+      <label for="gravCheck">Ativada</label>
+      <p>Escala das Flechas:</p>
+
+      <div>
+        <input type="range" class="slider" id="vecSlider" min="0" max="10" value="3" step="0.01">
+        <label for="vecSlider" id="vecLabel" class="centeredLabel">1.1 . 10⁻¹ m/N</label>
+      </div-->
+
+      <div>
+        <button onclick="updateQuestions()">Confirmar e Limpar Questões</button>
+      </div>
+
+    </span>
+
+    <div id="question_model" class="question" hidden=true>
+      <label name="question_label" class="question_label side-by-side">Questão 0</label>
+      <div class="alternative_wrapper side-by-side">
+        <input type="checkbox" name="alternative0" class="alternative">
+        <label for="alternative0">01</label>
+        <input type="checkbox" name="alternative1" class="alternative">
+        <label for="alternative1">02</label>
+        <input type="checkbox" name="alternative2" class="alternative">
+        <label for="alternative2">04</label>
+        <input type="checkbox" name="alternative3" class="alternative">
+        <label for="alternative3">08</label>
+        <input type="checkbox" name="alternative4" class="alternative">
+        <label for="alternative4">16</label>
+        <input type="checkbox" name="alternative5" class="alternative">
+        <label for="alternative5">32</label>
+        <input type="checkbox" name="alternative6" class="alternative">
+        <label for="alternative6">64</label>
+      </div>
+      <!--label class="side-by-side"> Gabarito:</label-->
+      <input name="gabarito" type="number" class="gabarito side-by-side" min=1 max=99 placeholder="Gabarito" required value>
+      <label class="side-by-side"> Contabilizar até a alternativa:</label>
+      <select name="ate_qual" class="ate_qual side-by-side">
+        <option value=0>01</option>
+        <option value=1>02</option>
+        <option value=2>04</option>
+        <option value=3>08</option>
+        <option value=4>16</option>
+        <option value=5>32</option>
+        <option value=6 selected>64</option>
+      </select>
+      <label class="side-by-side"> Pontuação: </label>
+      <label name="pontos_questao" class="pontos_questao side-by-side"></label>
+    </div>
+
+    <span id="questoes"></span>
+  </body>
+</html>
