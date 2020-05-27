@@ -6,11 +6,15 @@
     <title>Calculadora Somatório SALVE</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--div class="color-overlay"></div-->
+    <!--div class="parallax"></div-->
   </head>
 
   <body>
-    <h1>Calculadora Somatório SALVE</h1>
-    <p>Calcule a pontuação de questões sob o modelo UFSC de somatório</br></p>
+    <div class="header-box">
+      <h1 class="header">Calculadora Somatório SALVE</h1>
+      <p class="header">Calcule a pontuação de questões sob o modelo UFSC de somatório!</br></p>
+    </div>
     <span id="inputs">
       <p class="side-by-side">Quantidade de Questões:</p>
       <div class="side-by-side">
@@ -26,42 +30,72 @@
     <div id="question_model" class="question" hidden=true>
       <label name="question_label" class="question_label side-by-side">Questão 0</label>
       <div class="alternative_wrapper side-by-side">
-        <input type="checkbox" name="alternative0" class="alternative">
-        <label for="alternative0">01</label>
-        <input type="checkbox" name="alternative1" class="alternative">
-        <label for="alternative1">02</label>
-        <input type="checkbox" name="alternative2" class="alternative">
-        <label for="alternative2">04</label>
-        <input type="checkbox" name="alternative3" class="alternative">
-        <label for="alternative3">08</label>
-        <input type="checkbox" name="alternative4" class="alternative">
-        <label for="alternative4">16</label>
-        <input type="checkbox" name="alternative5" class="alternative">
-        <label for="alternative5">32</label>
-        <input type="checkbox" name="alternative6" class="alternative">
-        <label for="alternative6">64</label>
+        <label for="alternative0" class="checkbox-container no-wrap">01
+          <input type="checkbox" name="alternative0" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
+        <label for="alternative1" class="checkbox-container no-wrap">02
+          <input type="checkbox" name="alternative1" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
+        <label for="alternative2" class="checkbox-container no-wrap">04
+          <input type="checkbox" name="alternative2" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
+        <label for="alternative3" class="checkbox-container no-wrap">08
+          <input type="checkbox" name="alternative3" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
+        <label for="alternative4" class="checkbox-container no-wrap">16
+          <input type="checkbox" name="alternative4" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
+        <label for="alternative5" class="checkbox-container no-wrap">32
+          <input type="checkbox" name="alternative5" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
+        <label for="alternative6" class="checkbox-container no-wrap">64
+          <input type="checkbox" name="alternative6" class="css-checkbox alternative">
+          <!--span class="fake-checkmark"></span-->
+        </label>
       </div>
-      <!--label class="side-by-side"> Gabarito:</label-->
-      <input name="gabarito" type="number" class="gabarito side-by-side" min=1 max=99 placeholder="Gabarito" required value>
-      <label class="side-by-side"> Contabilizar até a alternativa:</label>
-      <select name="ate_qual" class="ate_qual side-by-side">
-        <option value=0>01</option>
-        <option value=1>02</option>
-        <option value=2>04</option>
-        <option value=3>08</option>
-        <option value=4>16</option>
-        <option value=5>32</option>
-        <option value=6 selected>64</option>
-      </select>
-      <label class="side-by-side"> Pontuação: </label>
-      <label name="pontos_questao" class="pontos_questao side-by-side"></label>
+      <div>
+        <div class="side-by-side no-wrap">
+          <label class="side-by-side">Gabarito:</label>
+          <input name="gabarito" type="number" class="gabarito side-by-side" min=1 max=99 required value>
+        </div>
+        <div class="side-by-side no-wrap">
+          <label class="side-by-side">Contabilizar até a alternativa:</label>
+          <select name="ate_qual" class="ate_qual side-by-side">
+            <option value=0>01</option>
+            <option value=1>02</option>
+            <option value=2>04</option>
+            <option value=3>08</option>
+            <option value=4>16</option>
+            <option value=5>32</option>
+            <option value=6 selected>64</option>
+          </select>
+        </div>
+      </div>
+      <div class="no-wrap">
+        <label class="side-by-side">Pontuação: </label>
+        <label name="pontos_questao" class="pontos_questao side-by-side"></label>
+      </div>
     </div>
 
     <span id="questoes"></span>
-    </br>
     <span id="pontuacao" class="destaque" hidden=true>
-      <label class="side-by-side"> Pontuação Final: </label>
+      <label class="side-by-side">Pontuação Final: </label>
       <label name="pontos_final" class="pontos_final side-by-side"></label>
+    </span>
+
+    <span id="propaganda">
+      <img src="images/logo.jpg" style="float:left; border-radius: 15px; width: 100px; height: 100px"></img>
+      <p class=propaganda>Esta ferramenta foi feita pela equipe do SALVE, uma associação de
+      ex-vestibulandos dedicada em auxiliar vestibulandos em seus estudos. </br> Está
+      com dificuldades nessa etapa crucial para o seu futuro? Procure-nos: </br>
+      <a href=https://www.instagram.com/salvevestibular/>Instagram: @salvevestibular</a>
+      </p>
     </span>
   </body>
 </html>

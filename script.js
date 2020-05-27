@@ -1,8 +1,8 @@
-// document.getElementbyId("qtQuestoes").oninput = function () {
-//     if (this.value.length > 4) {
-//         this.value = this.value.slice(0,4);
-//     }
-// }
+// Quem ler isso é uma pessoa muito linda e incrível! :3
+
+function pad(d) {
+    return (d < 10) ? '0' + d.toString() : d.toString();
+}
 
 function updateQuestions(){
 
@@ -14,7 +14,7 @@ function updateQuestions(){
   for (i = 0; i < document.getElementById("qtQuestoes").value; i++) {
     var new_question = q_model.cloneNode(true)
     new_question.hidden = false
-    new_question.getElementsByClassName("question_label")[0].innerHTML = `Questão ${i+1}`;
+    new_question.getElementsByClassName("question_label")[0].innerHTML = `Questão ${pad(i+1)}: `;
     resulting_span.appendChild(new_question)
   }
 
@@ -22,6 +22,7 @@ function updateQuestions(){
   ready_button.innerHTML = "Corrigir"
   ready_button.setAttribute("id", "ready_button")
   ready_button.setAttribute("onclick", "corrigir()")
+
   resulting_span.appendChild(ready_button)
 
   document.body.replaceChild(resulting_span, document.getElementById("questoes"));

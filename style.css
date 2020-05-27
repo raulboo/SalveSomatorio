@@ -1,9 +1,253 @@
+@font-face {
+  font-family: "gotham-black";
+  src: url("fonts/gotham-black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "gotham-bold";
+  src: url("fonts/gotham-bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "gotham-thin";
+  src: url("fonts/gotham-thin.ttf") format("truetype");
+}
+
 .side-by-side {
   display: inline-block;
 }
 
 .destaque {
   border: 5px;
-  margin: 0;
   line-height: 200%
+}
+html * {
+  background-color: rgba(0, 0, 0, 0)
+  font-family: "gotham-thin", Helvetica, Arial, sans-serif;
+  color: #F9F9F9;
+  margin:10px;
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-family: "gotham-thin", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  /* background: rgb(52,39,116);
+  background: linear-gradient(45deg, rgba(52,39,116,1) 0%, rgba(51,92,197,1) 48%, rgba(217,84,145,1) 100%); */
+  background: linear-gradient(90deg, rgba(0, 178, 202, 0.8) 0%, rgba(0, 8, 81, 0.8) 80%), url(images/blackand.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+}
+h1 {
+  font-family: "gotham-black", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 72px;
+}
+p {
+  font-family: "gotham-thin", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 48px;
+}
+input, button, select {
+  font-size: 32px;
+  background-color: rgba(38, 8, 28);
+  font-family: "gotham-thin", Helvetica, Arial, sans-serif;
+  border: 1px solid #F9F9F9;
+  border-radius: 5px;
+
+  padding: 8px;
+  margin-bottom: 7px;
+
+  /*width: 130px;
+  height: 40px;*/
+
+  display: inline-block
+}
+button {
+  display: block;
+  border-radius: 10px;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=checkbox] {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance:none;
+  /*outline: 2px solid lightblue;*/
+  box-shadow: none;
+  /*font-size: 2em;*/
+}
+/*input[type='checkbox']:checked {
+  background-color: rgba(0, 8, 81);
+}*/
+input[type='checkbox']:checked:after {
+  content: '\2713';
+  color: #F9F9F9;
+  position: absolute;
+  line-height: 1.5rem;
+  font-size:24px;
+  padding-left: 0.15rem;
+}
+
+.propaganda {
+  font-size: 24px;
+}
+
+/*
+.parallax {
+  /* The image used
+  background:
+  /*linear-gradient(45deg, rgba(52,39,116,1) 0%, rgba(51,92,197,1) 48%, rgba(217,84,145,1) 100%),
+  linear-gradient(90deg, rgba(28, 181, 224, 0.60) 0%, rgba(0, 8, 81, 0.60) 100%),
+  /*linear-gradient(rgba(51,92,197,0.48), rgba(217,84,145,1)),
+  url(images/blackand.jpg);
+  /*background-image: url(images/logo.jpg);
+
+  /* Set a specific height
+  height: 888px;
+
+  /* Create the parallax scrolling effect
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+}
+.color-overlay {
+  /*background: rgb(52,39,116);
+  z-index: -100;
+  position: fixed;
+  background-size: cover;
+  /*background-position: center;
+  /*width: 888px;
+  /*height: 888px;
+
+  background:
+  /*linear-gradient(45deg, rgba(52,39,116,1) 0%, rgba(51,92,197,1) 48%, rgba(217,84,145,1) 100%),
+  linear-gradient(90deg, rgba(28, 181, 224, 0.60) 0%, rgba(0, 8, 81, 0.60) 100%),
+  /*linear-gradient(rgba(51,92,197,0.48), rgba(217,84,145,1)),
+  url(images/blackand.jpg);
+}
+*/
+
+.header-box {
+  border-radius: 25px;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color :#832232;
+  /*color: #F9F9F9;*/
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+#inputs, #questoes, .question, #pontuacao, .destaque, #propaganda {
+  display: inline-block;
+  border-radius: 25px;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: rgba(38, 8, 28, 0.8);
+  /*color: #ffffff;*/
+}
+/*#pontuacao, .destaque, #propaganda {
+  color: #1C1D21;
+  background-color: rgb(28, 181, 224);
+}*/
+/*#propaganda, .propaganda {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}*/
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* The container
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: none;
+}
+
+/* Hide the browser's default checkbox
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox
+.fake-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color
+.checkbox-container:hover input ~ .fake-checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background
+.checkbox-container input:checked ~ .fake-checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked)
+.checkbox-container:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked
+.checkbox-container input:checked ~ .fake-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator
+.checkbox-container .fake-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+*/
+
+.checkbox-container.null {
+  background-color: grey;
+}
+.checkbox-container.correct {
+  background-color: green;
+}
+.checkbox-container.incorrect {
+  background-color: red;
+}
+
+#pontuacao[hidden], #question_model[hidden] {
+  display: none;
 }
