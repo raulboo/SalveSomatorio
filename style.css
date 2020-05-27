@@ -70,6 +70,9 @@ button {
   display: block;
   border-radius: 10px;
 }
+input[type=number] {
+  width:64px;
+}
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
