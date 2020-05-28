@@ -66,6 +66,25 @@ function corrigir(){
 
     question.getElementsByClassName("pontos_questao")[0].innerHTML = p.toFixed(2)
 
+    var estilizar_containers = question.getElementsByClassName("checkbox-container")
+    for (i = 0; i < estilizar_containers.length; i++){
+      // Se está fora das proposições consideradas, ou o gabarito é inválido
+      if ((i > (np-1)) || (gabarito_puro ? (gabarito_puro <= 0) : true)){
+        estilizar_containers[i].setAttribute("class", "checkbox-container null")
+        continue;
+      }
+
+      // Se tiver certo
+      if (!!+correctly_answered[i]){
+        estilizar_containers[i].setAttribute("class", "checkbox-container correct")
+      }
+      // Se tiver errado
+      else {
+        estilizar_containers[i].setAttribute("class", "checkbox-container incorrect")
+      }
+
+    }
+
     //console.log(`NP = ${np} ; NTPC = ${ntpc} ; NPC = ${npc} ; NPI = ${npi} ; P = ${p}`)
     pont_final += p
     pont_max += 1.0

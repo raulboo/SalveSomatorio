@@ -240,15 +240,19 @@ input[type='checkbox']:checked:after {
   transform: rotate(45deg);
 }
 */
+.checkbox-container {
+  padding: 3px;
+  border-radius: 5px;
+}
 
 .checkbox-container.null {
-  background-color: grey;
+  background-color: dimgray; /*grey*/
 }
 .checkbox-container.correct {
-  background-color: green;
+  background-color: green; /*green*/
 }
 .checkbox-container.incorrect {
-  background-color: red;
+  background-color: #832232; /*red*/
 }
 
 #pontuacao[hidden], #question_model[hidden] {
